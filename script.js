@@ -1,7 +1,8 @@
+
+
 $(document).ready(function(){
-
-
 //global variables
+
 
 
 
@@ -27,7 +28,33 @@ $("#date5").text(dateFive);
 
 }
 
-//make ajax call
+//submit button
+$("#submitBtn").click(function(event){
+event.preventDefault();
+getLocation();
+
+
+});
+
+//make ajax calls
+
+//get longitude and latitude
+function getLocation(){
+    var city = $("#input").val();
+    
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
+ 
+$.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+        console.log(response);
+
+      
+    });
+}
+
+// ajax call for weather
 
 //render values
 
