@@ -20,9 +20,9 @@ makeBtn();
 });
 
 
-$(".oldcity").on("click", function(event){
+$(document).on("click", ".oldcity", function(event){
     event.preventDefault();
-    var ocity = $(this).text()
+    var ocity = $(this).attr("data-name");
     console.log(ocity)
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+ocity+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
     $.ajax({
@@ -164,7 +164,9 @@ function makeBtn(){
     }
     for(var i=0; i< savedBtns.length;i++){
         var newList = $("<li class = 'list-group-item'> </li>")
-        var listBtn = $("<button class= 'oldcity'>");
+        var listBtn = $("<button>");
+        listBtn.addClass("oldcity")
+        listBtn.attr("data-name", savedBtns[i])
         listBtn.text(savedBtns[i])
         $("#btnContainer").prepend(newList);
         newList.append(listBtn);
