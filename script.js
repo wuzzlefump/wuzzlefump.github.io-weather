@@ -88,10 +88,16 @@ $.ajax({
     method: "GET"
 }).then(function(response) {
 
+//today
     $(".temp").text(response.current.temp)//need to convert to f
     $(".humidity").text(response.current.humidity)
     $("#wind").text(response.current.wind_speed)
     $("#uv").text(response.current.uvi)
+// tomorrow
+//day 2
+//day 3
+//day 4
+//day 5
         console.log(response);
 
     });
@@ -129,13 +135,6 @@ function makeBtn(){
     }
 
 }
-function ktof(x){
-x-273.15*1.8+32;
-}
-
-//color for uv conditions
-
-// Icon for weather
 
 //clear history
 $("#clear").click(function(){
