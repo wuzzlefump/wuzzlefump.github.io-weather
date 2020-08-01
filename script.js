@@ -24,7 +24,7 @@ $(document).on("click", ".oldcity", function(event){
     event.preventDefault();
     var ocity = $(this).attr("data-name");
     console.log(ocity)
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+ocity+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ocity+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -62,7 +62,7 @@ $("#date5").text(dateFive);
 function getLocation(){
     var city = $("#input").val();
     
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -85,7 +85,7 @@ function initView(){
         console.log(oscity)
         var scity = oscity[oscity.length-1]
         console.log(scity)
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+scity+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+scity+"&appid=834fc904f66ef35ce03a84b6fe8c29b5";
      
 
         render();
