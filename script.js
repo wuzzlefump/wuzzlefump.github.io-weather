@@ -81,7 +81,7 @@ function getLocation(){
 function getWeather(){
  
 
-    var queryURL ="https://api.openweathermap.org/data/2.5/onecall?lat="+latitude+"&lon="+longitude+"&appid=fecdb578259a1a724a8226c96828ee6d"; 
+    var queryURL ="https://api.openweathermap.org/data/2.5/onecall?lat="+latitude+"&lon="+longitude+"&units=imperial&appid=fecdb578259a1a724a8226c96828ee6d"; 
 
 $.ajax({
     url: queryURL,
